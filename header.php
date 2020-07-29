@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="<?php $this->options->themeUrl('normalize.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('grid.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('button.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('prism.css'); ?>">
     <script src="<?php $this->options->themeUrl('prism.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('jquery.js');?>"></script>
@@ -32,6 +33,9 @@ renderMathInElement(document.body,{
 	]
 })
     </script>
+    <style>
+<?php _e($this->options->cssCode); ?>
+    </style>
 
     <!--[if lt IE 9]>
     <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>

@@ -27,7 +27,6 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
             </div>
         </article>
 	<?php endwhile; ?>
-
     <?php $this->pageNav('&laquo; 上一页', '下一页 &raquo;'); ?>
 </div><!-- end #main-->
 

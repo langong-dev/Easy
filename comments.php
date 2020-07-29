@@ -7,7 +7,7 @@
     <?php $comments->listComments(); ?>
 
     <?php $comments->pageNav('&laquo; 上一页', '下一页 &raquo;'); ?>
-    
+
     <?php endif; ?>
 
     <?php if($this->allow('comment')): ?>
@@ -21,7 +21,8 @@
             <?php if($this->user->hasLogin()): ?>
     		<p><?php _e('登录身份  '); ?><a href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>. <a href="<?php $this->options->logoutUrl(); ?>" title="Logout"><?php _e('退出'); ?> &raquo;</a></p>
             <?php else: ?>
-    		<p>
+	
+		<p>
                 <label for="author" class="required"><?php _e('昵称'); ?></label>
     			<input type="text" name="author" id="author" class="text" value="<?php $this->remember('author'); ?>" required />
     		</p>
