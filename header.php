@@ -64,7 +64,7 @@ renderMathInElement(document.html,{
                 <a id="logo" href="<?php $this->options->siteUrl(); ?>">
                     <img src="<?php $this->options->logoUrl() ?>" alt="<?php $this->options->title() ?>" />
                 </a>
-            <?php //else: ?>
+            <?php else: ?>
                 <a id="logo" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>
         	    <p class="description"><?php $this->options->description() ?></p>
             <?php endif; ?>
