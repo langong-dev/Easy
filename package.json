@@ -1,0 +1,23 @@
+{
+  "name": "typecho-easy",
+  "version": "1.0.3",
+  "description": "一个简洁的Typecho主题，自带KaTeX、Prismjs",
+  "main": "jquery.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/langong-dev/Easy.git"
+  },
+  "keywords": [
+    "typecho",
+    "theme"
+  ],
+  "author": "langonginc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/langong-dev/Easy/issues"
+  },
+  "homepage": "https://github.com/langong-dev/Easy#readme"
+}

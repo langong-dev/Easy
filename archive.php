@@ -9,7 +9,7 @@
             'author'    =>  _t('%s 发布的文章')
         ), '', ''); ?></h3>
 	<?php if ($this->have()): ?>
-
+	<br><center>
     	<?php while($this->next()): ?>
             <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
     			<h2 class="post-title" itemprop="name headline"><a itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
@@ -18,10 +18,13 @@
     				<li><?php _e('创建日期  '); ?><time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date(); ?></time></li>
     				<li><?php _e('分类  '); ?><?php $this->category(','); ?></li>
 
-    			</ul>
+			</ul>
+			
+			<?php if ($this->fields->image){  _e('<img width="80%" src="'.$this->fields->image.'">');} ?>
     		</article>
     	<?php endwhile; ?>
-        <?php else: ?>
+	</center>
+	<?php else: ?>
             <article class="post">
                 <h2 class="post-title"><?php _e('没有找到内容'); ?></h2>
             </article>

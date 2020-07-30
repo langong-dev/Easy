@@ -181,9 +181,16 @@ textarea {
  * Main
  * --------------- */
 
+.pg{
+  width:90%;
+  margin: 0 auto;
+  /*border-style: solid solid solid solid;
+  border-width: 1px;*/
+}
 .post {
   padding: 15px 0 20px;
-  border-bottom: 1px solid #EEE;
+  background-color: rgb(251, 244, 244);
+  border: 12px solid #fff;
 }
 .post-title {
   margin: .83em 0;

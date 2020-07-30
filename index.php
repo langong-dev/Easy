@@ -13,6 +13,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
  ?>
 
 <div class="col-mb-12 col-8" id="main" role="main">
+<center>
 	<?php while($this->next()): ?>
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 			<h2 class="post-title" itemprop="name headline"><a itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
@@ -28,6 +29,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
         </article>
 	<?php endwhile; ?>
     <?php $this->pageNav('&laquo; 上一页', '下一页 &raquo;'); ?>
+</center>
 </div><!-- end #main-->
 
 <?php $this->need('sidebar.php'); ?>

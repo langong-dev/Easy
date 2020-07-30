@@ -41,7 +41,7 @@ renderMathInElement(document.html,{
     <style>
 <?php _e($this->options->cssCode); ?>
     </style>
-
+<?php _e($this->options->htmlCode);  ?>
     <!--[if lt IE 9]>
     <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
@@ -75,7 +75,8 @@ renderMathInElement(document.html,{
                     <input type="text" id="s" name="s" class="text" placeholder="<?php _e('搜点什么'); ?>" />
                     <button type="submit" class="submit"><?php _e('搜索'); ?></button>
                 </form>
-            </div>
+	    </div>
+<!--img width=100% src="http://516wjy.xyz:516/world.png"-->
             <div class="col-mb-12">
                 <nav id="nav-menu" class="clearfix" role="navigation">
                     <a<?php if($this->is('index')): ?> class="current"<?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a>
