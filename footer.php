@@ -22,10 +22,9 @@ $(document).pjax('a[href^="<?php Helper::options()->siteUrl()?>"]:not(a[target="
 })
 
 $(document).on('pjax:send', function () {
-            //NProgress.start();
+	NProgress.start();	
 }).on('pjax:complete', function () {
-	//NProgress.done();
-	
+	NProgress.done();
 <?php if (!empty($this->options->xuanran) && in_array('prism', $this->options->xuanran)){ ?>
 	self.Prism.highlightAll("#main");
 <?php } ?>

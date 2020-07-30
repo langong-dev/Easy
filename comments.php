@@ -42,7 +42,26 @@
     		<p>
                 <button type="submit" class="submit"><?php _e('走你'); ?></button>
             </p>
-    	</form>
+	</form>
+<!--
+<script>
+//#comment-form是提交评论的form
+$('#comment-form').submit(function(event){
+    var commentdata=$(this).serializeArray('author', 'mail', 'url', 'text');
+    //serializeArray()可以获取到表单数据
+    $.ajax({
+    url:$(this).attr('<?php $this->commentUrl(); ?>'), //表单的提交链接
+        type:$(this).attr('post'), //表单的提交方式(post)
+        data:commentdata, //需要提交的数据
+        beforeSend:function(){}, //AJAX提交前
+        error:function(){alert('失败');}, //AJAX提交失败
+        success:function(data){alert('成功');} //AJAX提交成功
+    });
+    return false; //阻止原先提交
+});
+</script>
+
+-->
     </div>
     <?php else: ?>
     <h3><?php _e('你来晚了，评论已经关闭'); ?></h3>

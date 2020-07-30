@@ -16,6 +16,8 @@
     <link rel="icon" href="<?php $this->options->logoUrl() ?>"/>
 
     <!-- 使用url函数转换相关路径 -->
+	<script src="<?php $this->options->themeUrl('nprogress.js'); ?>"></script>
+	<link rel='stylesheet' href="<?php $this->options->themeUrl('nprogress.css'); ?>"/>
     <link rel="stylesheet" href="<?php $this->options->themeUrl('normalize.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('grid.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>">
@@ -104,6 +106,7 @@ $(document).ready(function () { // this need jquery
         </div><!-- end .row -->
     </div>
 </header><!-- end #header -->
+<div style="display:none; z-index:9999; background-color: #ccc; position:fixed; top:0px; width:100%; height:100vh;" id="pjax-load" class="pjax_loading"></div>
 <div id="body">
     <div class="container">
         <div class="row">
