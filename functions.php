@@ -20,13 +20,20 @@ function themeConfig($form) {
     $form->addInput($cssCode);
     $jsCode = new Typecho_Widget_Helper_Form_Element_Textarea('jsCode', null, null, _t('额外泳自定义 JS'), _t('通过自定义 JS 您可以很方便的设置页面JS回调。'));
     $form->addInput($jsCode);
+    $xuanran = new Typecho_Widget_Helper_Form_Element_Checkbox('xuanran',
+    array('katex' => _t('渲染KaTeX公式'),
+    'prism' => _t('Prism代码高亮')),
+    NULL,
+     _t('额外渲染'),_t('勾选即渲染'));
+    $form->addInput($xuanran->multiMode());
 }
 
 
-/*
+
 function themeFields($layout) {
-    $logoUrl = new Typecho_Widget_Helper_Form_Element_Text('logoUrl', NULL, NULL, _t('站点LOGO地址'), _t('在这里填入一个图片URL地址, 以在网站标题前加上一个LOGO'));
-    $layout->addItem($logoUrl);
+    //$logoUrl = new Typecho_Widget_Helper_Form_Element_Text('logoUrl', NULL, NULL, _t('站点LOGO地址'), _t('在这里填入一个图片URL地址, 以在网站标题前加上一个LOGO'));
+	$image = new Typecho_Widget_Helper_Form_Element_Text('image', null, null, _t('文章图片'), _t('文章图片会显示在文章的顶部。'));
+	$layout->addItem($image);
 }
-*/
+
 

@@ -18,21 +18,26 @@
     <link rel="stylesheet" href="<?php $this->options->themeUrl('grid.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('button.css'); ?>">
+    <?php if (!empty($this->options->xuanran) && in_array('prism', $this->options->xuanran)){ ?>    
     <link rel="stylesheet" href="<?php $this->options->themeUrl('prism.css'); ?>">
     <script src="<?php $this->options->themeUrl('prism.js'); ?>"></script>
+    <?php } ?>
     <script src="<?php $this->options->themeUrl('jquery.js');?>"></script>
+<?php if (!empty($this->options->xuanran) && in_array('katex', $this->options->xuanran)){ ?>    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"         onload="renderMathInElement(document.body);"></script>
 
     <script>
-renderMathInElement(document.body,{
+renderMathInElement(document.html,{
 	delimiters: [
 		{left: "$$", right: "$$", display: true},
-		{left: "$", right: "$", display: false}
+		{left: "$", right: "$", display: false},
+		{ left: "\\[", right: "\\]", display: true }
 	]
 })
     </script>
+<?php } ?>
     <style>
 <?php _e($this->options->cssCode); ?>
     </style>
@@ -51,14 +56,15 @@ renderMathInElement(document.body,{
 <![endif]-->
 
 <header id="header" class="clearfix">
-    <div class="container">
+    
+<div class="container">
         <div class="row">
             <div class="site-name col-mb-12 col-9">
             <?php if ($this->options->logoUrl): ?>
                 <a id="logo" href="<?php $this->options->siteUrl(); ?>">
                     <img src="<?php $this->options->logoUrl() ?>" alt="<?php $this->options->title() ?>" />
                 </a>
-            <?php else: ?>
+            <?php //else: ?>
                 <a id="logo" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>
         	    <p class="description"><?php $this->options->description() ?></p>
             <?php endif; ?>
