@@ -18,16 +18,19 @@ function themeConfig($form) {
     $form->addInput($foots);
     $cssCode = new Typecho_Widget_Helper_Form_Element_Textarea('cssCode', null, null, _t('额外自定义 CSS'), _t('通过自定义 CSS 您可以很方便的设置页面样式，自定义 CSS 不会影响网站源代码。'));
     $form->addInput($cssCode);
-    $jsCode = new Typecho_Widget_Helper_Form_Element_Textarea('jsCode', null, null, _t('额外泳自定义 JS'), _t('通过自定义 JS 您可以很方便的设置页面JS回调。'));
+    $jsCode = new Typecho_Widget_Helper_Form_Element_Textarea('jsCode', null, null, _t('额外泳自定义 JS'), _t('可以在这里自定义JS代码，它会在所有页面生效。'));
     $form->addInput($jsCode);
     $htmlCode = new Typecho_Widget_Helper_Form_Element_Textarea('htmlCode', null, null, _t('额外泳自定义 HTML'), _t('通过自定义 HTML 您可以很方便的引用其他文件。'));
     $form->addInput($htmlCode);
     $xuanran = new Typecho_Widget_Helper_Form_Element_Checkbox('xuanran',
     array('katex' => _t('渲染KaTeX公式'),
-    'prism' => _t('Prism代码高亮')),
+    'prism' => _t('Prism代码高亮'),
+    'pjax' => _t('全站PJAX优化，无刷新跳转')),
     NULL,
      _t('额外渲染'),_t('勾选即渲染'));
     $form->addInput($xuanran->multiMode());
+    $pjaxCode = new Typecho_Widget_Helper_Form_Element_Textarea('pjaxCode', null, null, _t('PJAX 回调代码'), _t('如果您有什么插件或自定义代码中需要及时渲染页面，您可以在这里添加他们的回调代码。'));
+    $form->addInput($pjaxCode);
 }
 
 

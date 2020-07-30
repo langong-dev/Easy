@@ -1,10 +1,10 @@
 <?php
 /**
- * 一个简洁的Typecho主题，自带KaTeX、Prismjs
+ * 一个简洁的Typecho主题，自带KaTeX、Prismjs，支持PJAX无刷新跳转
  * 
  * @package Easy
- * @author langonginc
- * @version 1.0.2
+ * @author LanGong Development Team
+ * @version 1.0.8
  * @link github.com/langong-dev/Easy
  */
 
