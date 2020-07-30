@@ -1,5 +1,5 @@
 body {
-  background-color: #FFFFF0;
+  background-color: #F8F8F8;
   color: #444;
   /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   font-family: "Droid Serif", Georgia, "Times New Roman", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "WenQuanYi Micro Hei","Microsoft Yahei", serif;
@@ -189,8 +189,8 @@ textarea {
 }
 .post {
   padding: 15px 0 20px;
-  background-color: rgb(251, 244, 244);
-  border: 12px solid #fff;
+  background-color: #f0f0f0;
+  border: 12px solid #fAFAFA;
 }
 .post-title {
   margin: .83em 0;

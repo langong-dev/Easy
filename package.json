@@ -1,6 +1,6 @@
 {
   "name": "typecho-easy",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "一个简洁的Typecho主题，自带KaTeX、Prismjs",
   "main": "jquery.js",
   "scripts": {
