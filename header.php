@@ -13,6 +13,8 @@
             'author'    =>  _t('%s 发布的文章')
         ), '', ' | '); ?><?php $this->options->title(); ?></title>
 
+    <link rel="icon" href="<?php $this->options->logoUrl() ?>"/>
+
     <!-- 使用url函数转换相关路径 -->
     <link rel="stylesheet" href="<?php $this->options->themeUrl('normalize.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('grid.css'); ?>">
@@ -60,14 +62,16 @@ renderMathInElement(document.html,{
 <div class="container">
         <div class="row">
             <div class="site-name col-mb-12 col-9">
-            <?php if ($this->options->logoUrl): ?>
+	    <?php //if ($this->options->logoUrl): ?>
+		<!--
                 <a id="logo" href="<?php $this->options->siteUrl(); ?>">
                     <img src="<?php $this->options->logoUrl() ?>" alt="<?php $this->options->title() ?>" />
-                </a>
-            <?php else: ?>
+		</a>
+		-->
+            <?php //else: ?>
                 <a id="logo" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>
         	    <p class="description"><?php $this->options->description() ?></p>
-            <?php endif; ?>
+            <?php //endif; ?>
             </div>
             <div class="site-search col-3 kit-hidden-tb">
                 <form id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
