@@ -4,7 +4,7 @@
  * 
  * @package Easy
  * @author langonginc
- * @version 1.0.1
+ * @version 1.0.2
  * @link github.com/langong-dev/Easy
  */
 
