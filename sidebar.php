@@ -56,4 +56,12 @@
 	</section>
     <?php endif; ?>
 
+	<?php if (!empty($this->options->sidebarBlock) && in_array('link', $this->options->sidebarBlock)): ?>
+	<section class="widget">
+		<h3 class="widget-title"><?php _e('链接'); ?></h3>
+		<ul class="widget-list">
+			<?php $this->options->linkCode(); ?>
+		</ul>
+	</section>
+	<?php endif; ?>
 </div><!-- end #sidebar -->

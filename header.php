@@ -15,7 +15,8 @@
 
     <link rel="icon" href="<?php $this->options->logoUrl() ?>"/>
 
-    <!-- 使用url函数转换相关路径 -->
+	<!-- 使用url函数转换相关路径 -->
+
 	<script src="<?php $this->options->themeUrl('nprogress.js'); ?>"></script>
 	<link rel='stylesheet' href="<?php $this->options->themeUrl('nprogress.css'); ?>"/>
     <link rel="stylesheet" href="<?php $this->options->themeUrl('normalize.css'); ?>">
@@ -26,13 +27,16 @@
     <link rel="stylesheet" href="<?php $this->options->themeUrl('prism.css'); ?>">
     <script src="<?php $this->options->themeUrl('prism.js'); ?>"></script>
     <?php } ?>
-    <script src="<?php //$this->options->themeUrl('jquery.js');?>https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="<?php $this->options->themeUrl('jquery.js');?>"></script>
     <script src="<?php $this->options->themeUrl('pjax.js');?>"></script>
 <?php if (!empty($this->options->xuanran) && in_array('katex', $this->options->xuanran)){ ?>    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"         onload="renderMathInElement(document.body);"></script>
-
+    -->
+	<link rel="stylesheet" href="<?php $this->options->themeUrl('katex.min.css'); ?>" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+		<script defer src="<?php $this->options->themeUrl('katex.min.js'); ?>" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+		<script defer src="<?php $this->options->themeUrl('auto-render.min.js'); ?>" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"         onload="renderMathInElement(document.body);"></script>
     <script>
 /*renderMathInElement(document.body,function (){
 	delimiters: [
@@ -86,14 +90,14 @@ $(document).ready(function () { // this need jquery
         	    <p class="description"><?php $this->options->description() ?></p>
             <?php //endif; ?>
             </div>
-            <div class="site-search col-3 kit-hidden-tb">
+			<div class="site-search col-3 kit-hidden-tb">
+
                 <form id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
                     <label for="s" class="sr-only"><?php _e('搜索关键字'); ?></label>
                     <input type="text" id="s" name="s" class="text" placeholder="<?php _e('搜点什么'); ?>" />
                     <button type="submit" class="submit"><?php _e('搜索'); ?></button>
                 </form>
 	    </div>
-<!--img width=100% src="http://516wjy.xyz:516/world.png"-->
             <div class="col-mb-12">
                 <nav id="nav-menu" class="clearfix" role="navigation">
                     <a<?php if($this->is('index')): ?> class="current"<?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a>
