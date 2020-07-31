@@ -17,6 +17,7 @@
 
 	<!-- 使用url函数转换相关路径 -->
 
+	<link rel="stylesheet" href="<?php $this->options->themeUrl('gototop.css'); ?>"/>
 	<script src="<?php $this->options->themeUrl('nprogress.js'); ?>"></script>
 	<link rel='stylesheet' href="<?php $this->options->themeUrl('nprogress.css'); ?>"/>
     <link rel="stylesheet" href="<?php $this->options->themeUrl('normalize.css'); ?>">
@@ -27,17 +28,18 @@
     <link rel="stylesheet" href="<?php $this->options->themeUrl('prism.css'); ?>">
     <script src="<?php $this->options->themeUrl('prism.js'); ?>"></script>
     <?php } ?>
-    <script src="<?php $this->options->themeUrl('jquery.js');?>"></script>
+    <script src="<?php //$this->options->themeUrl('jquery.js');?>https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
     <script src="<?php $this->options->themeUrl('pjax.js');?>"></script>
 <?php if (!empty($this->options->xuanran) && in_array('katex', $this->options->xuanran)){ ?>    
-    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"         onload="renderMathInElement(document.body);"></script>
-    -->
-	<link rel="stylesheet" href="<?php $this->options->themeUrl('katex.min.css'); ?>" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+    
+	<!--<link rel="stylesheet" href="<?php $this->options->themeUrl('katex.min.css'); ?>" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 		<script defer src="<?php $this->options->themeUrl('katex.min.js'); ?>" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
 		<script defer src="<?php $this->options->themeUrl('auto-render.min.js'); ?>" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"         onload="renderMathInElement(document.body);"></script>
-    <script>
+		-->
+		<script>
 /*renderMathInElement(document.body,function (){
 	delimiters: [
 		{left: "$$", right: "$$", display: true},

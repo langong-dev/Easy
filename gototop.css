@@ -1,0 +1,49 @@
+
+.right-bar {
+            position: fixed;
+            display: none;
+            bottom: 100px;
+            right: 0;
+            text-align: center;
+        }
+ 
+        .right-bar a {
+            text-align: center;
+            text-decoration: none;
+            color: #757575;
+            display: block;
+            width: 64px;
+        }
+ 
+        .right-bar .bar-img {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            padding-top: 20px;
+            margin: 0 0 0 17px;
+        }
+ 
+        .right-bar .bar-s .bar-img img {
+            width: 20px;
+            height: 20px;
+        }
+ 
+        .right-bar .bar-img .hover-img {
+            display: none;
+        }
+ 
+        .right-bar a:hover .hover-img {
+            display: block;
+        }
+ 
+        .right-bar a:hover .original-img {
+            display: none;
+        }
+ 
+        .content {
+            margin: 10px 100px;
+            text-indent: 2em;
+            text-align: justify;
+            line-height: 1.6em;
+        }
+
