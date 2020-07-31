@@ -2,6 +2,8 @@
 
 一个简洁的Typecho主题，自带KaTeX、Prismjs
 
+体验地址 http://516wjy.xyz:516/
+
 ## 部署方案1 极速部署
 
 请确保您已经安装了`git`
